@@ -21,3 +21,9 @@ cacheSolve <- function(x, ...){
   x$setInverse(inv)
   inv  #returning the inverse value
 }
+
+source("makeCacheMatrix.R")
+cmatrix<-makeCacheMatrix(matrix(4:1, nrow=2, ncol=2))
+cmatrix$get()
+cacheSolve(cmatrix)
+cmatrix$getInverse()
