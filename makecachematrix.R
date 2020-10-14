@@ -27,3 +27,21 @@ cmatrix<-makeCacheMatrix(matrix(4:1, nrow=2, ncol=2))
 cmatrix$get()
 cacheSolve(cmatrix)
 cmatrix$getInverse()
+set.seed(1)
+rpois(5, 2)
+outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+getwd()
+setwd("F:/Library/R Programing/specdata")
+outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+head(outcome)
+names(outcome) 
+outcome[, 11] <- as.numeric(outcome[, 11])
+hist(outcome[, 11])
+best <- function(state, outcome) {
+  ## Read outcome data
+  ## Check that state and outcome are valid
+  ## Return hospital name in that state with lowest 30-day death
+  ## rate
+}
+
+
